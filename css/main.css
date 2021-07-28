@@ -49,4 +49,18 @@ svg {
     max-width: 1680px;
   }
 }
+
+.nav-site__list,
+.nav-site__palette {
+  list-style: none;
+}
+
+.nav-site__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=main.css.map */
