@@ -10,10 +10,12 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   position: relative;
+  height: 100%;
   color: #000000;
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
@@ -25,10 +27,15 @@ svg {
   display: block;
   max-width: 100%;
 }
-header {
+.header {
   position: absolute;
 }
-
+main {
+  height: 100%;
+}
+.section {
+  height: 100%;
+}
 .container {
   max-width: 100%;
 
@@ -56,7 +63,12 @@ header {
 
 .map__container {
   overflow: scroll;
+  scrollbar-width: none;
   height: 100%;
+}
+.map__container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .map__box {
