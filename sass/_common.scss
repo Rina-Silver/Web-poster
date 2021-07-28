@@ -39,3 +39,12 @@ svg {
     max-width: 1680px;
   }
 }
+
+.nav-site__list,
+.nav-site__palette {
+  list-style: none;
+}
+.nav-site__list {
+  display: flex;
+  align-items: center;
+}
