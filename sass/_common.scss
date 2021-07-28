@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  position: relative;
   color: #000000;
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
@@ -24,9 +25,13 @@ svg {
   display: block;
   max-width: 100%;
 }
+header {
+  position: absolute;
+}
 
 .container {
   max-width: 100%;
+
   margin: 0 auto;
 
   @include adaptive-size(mobile) {
@@ -47,4 +52,13 @@ svg {
 .nav-site__list {
   display: flex;
   align-items: center;
+}
+
+.map__container {
+  overflow: scroll;
+  height: 100%;
+}
+
+.map__box {
+  width: 220vw;
 }

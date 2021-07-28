@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  position: relative;
   color: #000000;
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
@@ -25,6 +26,10 @@ img,
 svg {
   display: block;
   max-width: 100%;
+}
+
+header {
+  position: absolute;
 }
 
 .container {
@@ -62,5 +67,14 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.map__container {
+  overflow: scroll;
+  height: 100%;
+}
+
+.map__box {
+  width: 220vw;
 }
 /*# sourceMappingURL=main.css.map */
