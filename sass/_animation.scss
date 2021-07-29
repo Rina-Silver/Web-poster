@@ -1,0 +1,26 @@
+.animation {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #c4c4c4 0%,
+    rgba(196, 196, 196, 0) 100%
+  );
+  border-radius: 50%;
+  height: 5em;
+  width: 5em;
+  animation: spin 5s, zoomInZoomOut 5s;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoomInZoomOut {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

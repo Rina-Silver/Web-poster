@@ -26,46 +26,53 @@
       <div class="container header__container">
         <nav class="nav-site header__nav-site" aria-label="Main navigation">
           <ul class="nav-site__list">
-            <li class="navigation__item">
+            <li class="nav-site__item">
               <svg width="45" height="45">
                 <use href="./img/icons-for-map.svg#snow-patches"></use>
               </svg>
+              <span class="nav-site__label">снежные участки</span>
             </li>
-            <li class="navigation__item">
+            <li class="nav-site__item">
               <svg width="45" height="45">
                 <use href="./img/icons-for-map.svg#light-underground"></use>
               </svg>
+              <span class="nav-site__label">свет под землей</span>
             </li>
-            <li class="navigation__item">
+            <li class="nav-site__item">
               <svg width="38" height="46">
                 <use href="./img/icons-for-map.svg#gems"></use>
               </svg>
+              <span class="nav-site__label">драгоценные камни</span>
             </li>
-            <li class="navigation__item">
+            <li class="nav-site__item">
               <svg width="46" height="47">
                 <use href="./img/icons-for-map.svg#lava-flow-points"></use>
               </svg>
+              <span class="nav-site__label">места протекания лавы</span>
             </li>
-            <li class="navigation__item">
+            <li class="nav-site__item">
               <svg width="59" height="39">
                 <use href="./img/icons-for-map.svg#lakes"></use>
               </svg>
+              <span class="nav-site__label">озера</span>
             </li>
-            <li class="navigation__item">
+            <li class="nav-site__item">
               <svg width="26" height="47">
                 <use href="./img/icons-for-map.svg#groundwater"></use>
               </svg>
+              <span class="nav-site__label">подземные воды</span>
             </li>
-            <li class="navigation__item">
+            <li class="nav-site__item">
               <svg width="20" height="45">
                 <use href="./img/icons-for-map.svg#temp"></use>
               </svg>
+              <span class="nav-site__label">температура</span>
+              <ul class="nav-site__palette">
+                <li class="nav-site__colouring"></li>
+                <li class="nav-site__colouring"></li>
+                <li class="nav-site__colouring"></li>
+              </ul>
             </li>
-          </ul>
-          <ul class="nav-site__palette">
-            <li class="nav-site__colouring"></li>
-            <li class="nav-site__colouring"></li>
-            <li class="nav-site__colouring"></li>
           </ul>
         </nav>
       </div>
@@ -76,23 +83,83 @@
       <section class="section map">
         <div class="container map__container">
           <div class="map__box">
-            <img src="./img/main-map.svg" alt="Main map" />
-            <div>
-              <p>Rfhnbyrf</p>
-              <button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button
-              ><button class="map__button"></button>
+            <img class="map__img" src="./img/main-map.svg" alt="Main map" />
+            <div class="map__inner">
+              <div class="map__icons">
+                <svg width="45" height="45">
+                  <use href="./img/icons-for-map.svg#snow-patches"></use>
+                </svg>
+                <svg width="45" height="45">
+                  <use href="./img/icons-for-map.svg#light-underground"></use>
+                </svg>
+                <p class="map__label">Старая Русса</p>
+              </div>
+              <div class="map__icons">
+                <svg width="45" height="45">
+                  <use href="./img/icons-for-map.svg#snow-patches"></use>
+                </svg>
+                <p class="map__label">Кунгурская пещера</p>
+              </div>
+              <div class="map__icons">
+                <svg width="38" height="46">
+                  <use href="./img/icons-for-map.svg#gems"></use>
+                </svg>
+                <svg width="59" height="39">
+                  <use href="./img/icons-for-map.svg#lakes"></use>
+                </svg>
+                <p class="map__label">Тавдинские пещеры</p>
+              </div>
+              <div class="map__icons">
+                <svg width="26" height="47">
+                  <use href="./img/icons-for-map.svg#groundwater"></use>
+                </svg>
+                <p class="map__label">Денисова пещера</p>
+              </div>
+              <div class="map__icons">
+                <svg width="38" height="46">
+                  <use href="./img/icons-for-map.svg#gems"></use>
+                </svg>
+                <p class="map__label">Кашкулакская пещера</p>
+              </div>
+              <div class="map__icons">
+                <svg width="26" height="47">
+                  <use href="./img/icons-for-map.svg#groundwater"></use>
+                </svg>
+                <p class="map__label">Кахинайдаах</p>
+              </div>
+              <div class="map__icons">
+                <svg width="45" height="45">
+                  <use href="./img/icons-for-map.svg#light-underground"></use>
+                </svg>
+                <svg width="26" height="47">
+                  <use href="./img/icons-for-map.svg#groundwater"></use>
+                </svg>
+                <p class="map__label">Бездонная яма</p>
+              </div>
+              <div class="map__icons">
+                <svg width="46" height="47">
+                  <use href="./img/icons-for-map.svg#lava-flow-points"></use>
+                </svg>
+                <p class="map__label">Мутновский вулкан</p>
+              </div>
+              <div class="map__icons">
+                <svg width="46" height="47">
+                  <use href="./img/icons-for-map.svg#lava-flow-points"></use>
+                </svg>
+                <p class="map__label">Горелый</p>
+              </div>
+              <div class="map__icons">
+                <svg width="46" height="47">
+                  <use href="./img/icons-for-map.svg#lava-flow-points"></use>
+                </svg>
+                <p class="map__label">Вилючинский вулкан</p>
+              </div>
+              <div class="map__icons">
+                <svg width="46" height="47">
+                  <use href="./img/icons-for-map.svg#lava-flow-points"></use>
+                </svg>
+                <p class="map__label">Малый Семячик</p>
+              </div>
             </div>
           </div>
         </div>

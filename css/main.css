@@ -12,11 +12,9 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 body {
-  position: relative;
   height: 100%;
   color: #000000;
   background-color: #ffffff;
@@ -30,18 +28,6 @@ svg {
   max-width: 100%;
 }
 
-.header {
-  position: absolute;
-}
-
-main {
-  height: 100%;
-}
-
-.section {
-  height: 100%;
-}
-
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -53,9 +39,21 @@ main {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 1679px) {
+  .container {
+    max-width: 1360px;
   }
 }
 
@@ -65,9 +63,24 @@ main {
   }
 }
 
-.nav-site__list,
-.nav-site__palette {
-  list-style: none;
+.container {
+  position: relative;
+}
+
+.nav-site {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  width: 100%;
+  background-color: #242424;
 }
 
 .nav-site__list {
@@ -77,6 +90,103 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 320px) {
+  .nav-site {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-site {
+    height: 160px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .nav-site {
+    height: 146px;
+  }
+}
+
+.nav-site__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-site__label {
+  display: inline-block;
+}
+
+.nav-site__colouring {
+  border: 0.3px solid #ffffff;
+}
+
+.nav-site__colouring:first-child {
+  background-color: #c1c1c1;
+}
+
+.nav-site__colouring:nth-child(2) {
+  background-color: #565656;
+}
+
+.nav-site__colouring:last-child {
+  background-color: #000000;
+}
+
+@media screen and (min-width: 320px) {
+  .nav-site__colouring {
+    width: 8px;
+    height: 8px;
+  }
+  .nav-site__colouring:first-child {
+    margin-bottom: 3px;
+  }
+  .nav-site__colouring:nth-child(2) {
+    margin-bottom: 3px;
+  }
+  .nav-site__colouring:last-child {
+    margin-bottom: -3px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-site__colouring {
+    width: 17px;
+    height: 17px;
+  }
+  .nav-site__colouring:first-child {
+    margin-bottom: 7px;
+  }
+  .nav-site__colouring:nth-child(2) {
+    margin-bottom: 7px;
+  }
+  .nav-site__colouring:last-child {
+    margin-bottom: -7px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .nav-site__colouring {
+    width: 16px;
+    height: 16px;
+  }
+  .nav-site__colouring:first-child {
+    margin-bottom: 6px;
+  }
+  .nav-site__colouring:nth-child(2) {
+    margin-bottom: 6px;
+  }
+  .nav-site__colouring:last-child {
+    margin-bottom: -6px;
+  }
+}
+
+.nav-site__list,
+.nav-site__palette {
+  list-style: none;
 }
 
 .map__container {
@@ -92,5 +202,69 @@ main {
 
 .map__box {
   width: 220vw;
+}
+
+.map__img {
+  position: relative;
+}
+
+.map__inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.map__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.animation {
+  background: radial-gradient(50% 50% at 50% 50%, #c4c4c4 0%, rgba(196, 196, 196, 0) 100%);
+  border-radius: 50%;
+  height: 5em;
+  width: 5em;
+  -webkit-animation: spin 5s, zoomInZoomOut 5s;
+          animation: spin 5s, zoomInZoomOut 5s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes zoomInZoomOut {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes zoomInZoomOut {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
 }
 /*# sourceMappingURL=main.css.map */
