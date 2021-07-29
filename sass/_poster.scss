@@ -1,5 +1,3 @@
-.header__container {
-}
 .container {
   position: relative;
 }
@@ -9,10 +7,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
 
-  background-color: #242424;
+  background-color: #000000;
+  @include adaptive-size(desktop) {
+    background-color: #242424;
+  }
 
   &__list {
     display: flex;
@@ -31,8 +32,27 @@
   &__item {
     display: flex;
   }
+
+  &__icon {
+    @include adaptive-size(mobile) {
+      width: 21px;
+      height: 21px;
+    }
+    @include adaptive-size(tablet) {
+      width: 65px;
+      height: 65px;
+    }
+    @include adaptive-size(desktop) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
   &__label {
-    display: inline-block;
+    display: none;
+    @include adaptive-size(desktop) {
+      display: inline-block;
+    }
   }
 }
 
@@ -124,9 +144,5 @@
     right: 0;
     left: 0;
     z-index: 1;
-  }
-
-  &__icons {
-    display: flex;
   }
 }

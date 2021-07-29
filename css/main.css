@@ -12,14 +12,20 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   height: 100%;
-  color: #000000;
-  background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+main,
+.map {
+  height: 100%;
 }
 
 img,
@@ -30,6 +36,7 @@ svg {
 
 .container {
   max-width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -63,6 +70,14 @@ svg {
   }
 }
 
+.ellipses {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 .container {
   position: relative;
 }
@@ -78,9 +93,15 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
-  background-color: #242424;
+  background-color: #000000;
+}
+
+@media screen and (min-width: 1680px) {
+  .nav-site {
+    background-color: #242424;
+  }
 }
 
 .nav-site__list {
@@ -116,8 +137,35 @@ svg {
   display: flex;
 }
 
+@media screen and (min-width: 320px) {
+  .nav-site__icon {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-site__icon {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .nav-site__icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
 .nav-site__label {
-  display: inline-block;
+  display: none;
+}
+
+@media screen and (min-width: 1680px) {
+  .nav-site__label {
+    display: inline-block;
+  }
 }
 
 .nav-site__colouring {
@@ -217,17 +265,11 @@ svg {
   z-index: 1;
 }
 
-.map__icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .animation {
   background: radial-gradient(50% 50% at 50% 50%, #c4c4c4 0%, rgba(196, 196, 196, 0) 100%);
   border-radius: 50%;
-  height: 5em;
-  width: 5em;
+  width: 267px;
+  height: 267px;
   -webkit-animation: spin 5s, zoomInZoomOut 5s;
           animation: spin 5s, zoomInZoomOut 5s;
   -webkit-animation-duration: 5s;

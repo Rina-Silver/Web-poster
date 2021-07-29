@@ -10,14 +10,21 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   height: 100%;
-  color: #000000;
-  background-color: #ffffff;
+
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+
+  color: #000000;
+  background-color: #ffffff;
+}
+main,
+.map {
+  height: 100%;
 }
 
 img,
@@ -28,6 +35,7 @@ svg {
 
 .container {
   max-width: 100%;
+  height: 100%;
 
   margin: 0 auto;
 
@@ -46,4 +54,12 @@ svg {
   @include adaptive-size(desktop) {
     max-width: 1680px;
   }
+}
+
+.ellipses {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
