@@ -34,7 +34,7 @@
 
     @include adaptive-size(mobile) {
       &:not(:last-child) {
-        margin-right: 25px;
+        margin-right: 14px;
       }
     }
 
@@ -45,7 +45,7 @@
     }
     @include adaptive-size(desktop) {
       &:not(:last-child) {
-        margin-right: 58px;
+        margin-right: 50px;
       }
     }
   }
@@ -54,15 +54,24 @@
     @include adaptive-size(mobile) {
       width: 26px;
       height: 21px;
+      &--lake {
+        width: 42px;
+      }
     }
 
     @include adaptive-size(tablet) {
       width: 87px;
       height: 70px;
+      &--lake {
+        width: 142px;
+      }
     }
     @include adaptive-size(desktop) {
       width: 59px;
       height: 47px;
+      &--lake {
+        width: 95px;
+      }
     }
   }
 
@@ -78,6 +87,19 @@
     @include adaptive-size(desktop) {
       display: inline-flex;
     }
+  }
+}
+
+nav-site__icon--lake {
+  @include adaptive-size(mobile) {
+    width: 42px;
+  }
+
+  @include adaptive-size(tablet) {
+    width: 142px;
+  }
+  @include adaptive-size(desktop) {
+    width: 95px;
   }
 }
 
@@ -99,37 +121,21 @@
     height: 8px;
     margin-left: 8px;
 
-    margin-bottom: 3px;
+    margin-top: 3px;
   }
   @include adaptive-size(tablet) {
     width: 17px;
     height: 17px;
     margin-left: 20px;
 
-    &:first-child {
-      margin-bottom: 7px;
-    }
-    &:nth-child(2) {
-      margin-bottom: 7px;
-    }
-    &:last-child {
-      margin-bottom: -7px;
-    }
+    margin-top: 7px;
   }
   @include adaptive-size(desktop) {
     width: 16px;
     height: 16px;
     margin-left: 8px;
 
-    &:first-child {
-      margin-bottom: 6px;
-    }
-    &:nth-child(2) {
-      margin-bottom: 6px;
-    }
-    &:last-child {
-      margin-bottom: -6px;
-    }
+    margin-top: 6px;
   }
 }
 

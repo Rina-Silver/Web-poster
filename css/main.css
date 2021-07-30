@@ -28,8 +28,7 @@ main,
   height: 100%;
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
 }
@@ -139,7 +138,7 @@ svg {
 
 @media screen and (min-width: 320px) {
   .nav-site__item:not(:last-child) {
-    margin-right: 25px;
+    margin-right: 14px;
   }
 }
 
@@ -151,7 +150,7 @@ svg {
 
 @media screen and (min-width: 1680px) {
   .nav-site__item:not(:last-child) {
-    margin-right: 58px;
+    margin-right: 50px;
   }
 }
 
@@ -160,6 +159,9 @@ svg {
     width: 26px;
     height: 21px;
   }
+  .nav-site__icon--lake {
+    width: 42px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -167,12 +169,18 @@ svg {
     width: 87px;
     height: 70px;
   }
+  .nav-site__icon--lake {
+    width: 142px;
+  }
 }
 
 @media screen and (min-width: 1680px) {
   .nav-site__icon {
     width: 59px;
     height: 47px;
+  }
+  .nav-site__icon--lake {
+    width: 95px;
   }
 }
 
@@ -189,6 +197,24 @@ svg {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  nav-site__icon--lake {
+    width: 42px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav-site__icon--lake {
+    width: 142px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  nav-site__icon--lake {
+    width: 95px;
   }
 }
 
@@ -213,7 +239,7 @@ svg {
     width: 8px;
     height: 8px;
     margin-left: 8px;
-    margin-bottom: 3px;
+    margin-top: 3px;
   }
 }
 
@@ -222,15 +248,7 @@ svg {
     width: 17px;
     height: 17px;
     margin-left: 20px;
-  }
-  .nav-site__colouring:first-child {
-    margin-bottom: 7px;
-  }
-  .nav-site__colouring:nth-child(2) {
-    margin-bottom: 7px;
-  }
-  .nav-site__colouring:last-child {
-    margin-bottom: -7px;
+    margin-top: 7px;
   }
 }
 
@@ -239,15 +257,7 @@ svg {
     width: 16px;
     height: 16px;
     margin-left: 8px;
-  }
-  .nav-site__colouring:first-child {
-    margin-bottom: 6px;
-  }
-  .nav-site__colouring:nth-child(2) {
-    margin-bottom: 6px;
-  }
-  .nav-site__colouring:last-child {
-    margin-bottom: -6px;
+    margin-top: 6px;
   }
 }
 
