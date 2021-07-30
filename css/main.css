@@ -60,7 +60,7 @@ svg {
 
 @media screen and (max-width: 1679px) {
   .container {
-    max-width: 1360px;
+    max-width: 1366px;
   }
 }
 
@@ -98,7 +98,7 @@ svg {
   background-color: #000000;
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1024px) {
   .nav-site {
     background-color: #242424;
   }
@@ -108,26 +108,23 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 320px) {
   .nav-site {
-    height: 60px;
+    height: 58px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .nav-site {
-    height: 160px;
+    height: 154px;
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (max-width: 1679px) {
   .nav-site {
-    height: 146px;
+    height: 147px;
   }
 }
 
@@ -135,36 +132,63 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media screen and (min-width: 320px) {
+  .nav-site__item:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-site__item:not(:last-child) {
+    margin-right: 83px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .nav-site__item:not(:last-child) {
+    margin-right: 58px;
+  }
 }
 
 @media screen and (min-width: 320px) {
   .nav-site__icon {
-    width: 21px;
+    width: 26px;
     height: 21px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .nav-site__icon {
-    width: 65px;
-    height: 65px;
+    width: 87px;
+    height: 70px;
   }
 }
 
 @media screen and (min-width: 1680px) {
   .nav-site__icon {
-    width: 45px;
-    height: 45px;
+    width: 59px;
+    height: 47px;
   }
 }
 
 .nav-site__label {
   display: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 1680px) {
   .nav-site__label {
-    display: inline-block;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
 }
 
@@ -188,15 +212,8 @@ svg {
   .nav-site__colouring {
     width: 8px;
     height: 8px;
-  }
-  .nav-site__colouring:first-child {
+    margin-left: 8px;
     margin-bottom: 3px;
-  }
-  .nav-site__colouring:nth-child(2) {
-    margin-bottom: 3px;
-  }
-  .nav-site__colouring:last-child {
-    margin-bottom: -3px;
   }
 }
 
@@ -204,6 +221,7 @@ svg {
   .nav-site__colouring {
     width: 17px;
     height: 17px;
+    margin-left: 20px;
   }
   .nav-site__colouring:first-child {
     margin-bottom: 7px;
@@ -220,6 +238,7 @@ svg {
   .nav-site__colouring {
     width: 16px;
     height: 16px;
+    margin-left: 8px;
   }
   .nav-site__colouring:first-child {
     margin-bottom: 6px;

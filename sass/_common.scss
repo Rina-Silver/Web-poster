@@ -49,7 +49,7 @@ svg {
     max-width: 1024px;
   }
   @include adaptive-size(desktop-break) {
-    max-width: 1360px;
+    max-width: 1366px;
   }
   @include adaptive-size(desktop) {
     max-width: 1680px;

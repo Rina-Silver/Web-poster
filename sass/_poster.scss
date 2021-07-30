@@ -11,47 +11,72 @@
   width: 100%;
 
   background-color: #000000;
-  @include adaptive-size(desktop) {
+  @include adaptive-size(tablet) {
     background-color: #242424;
   }
 
   &__list {
     display: flex;
-    align-items: center;
   }
   @include adaptive-size(mobile) {
-    height: 60px;
+    height: 58px;
   }
   @include adaptive-size(tablet) {
-    height: 160px;
+    height: 154px;
   }
-  @include adaptive-size(desktop) {
-    height: 146px;
+  @include adaptive-size(desktop-break) {
+    height: 147px;
   }
 
   &__item {
     display: flex;
+    align-items: flex-end;
+
+    @include adaptive-size(mobile) {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+
+    @include adaptive-size(tablet) {
+      &:not(:last-child) {
+        margin-right: 83px;
+      }
+    }
+    @include adaptive-size(desktop) {
+      &:not(:last-child) {
+        margin-right: 58px;
+      }
+    }
   }
 
   &__icon {
     @include adaptive-size(mobile) {
-      width: 21px;
+      width: 26px;
       height: 21px;
     }
+
     @include adaptive-size(tablet) {
-      width: 65px;
-      height: 65px;
+      width: 87px;
+      height: 70px;
     }
     @include adaptive-size(desktop) {
-      width: 45px;
-      height: 45px;
+      width: 59px;
+      height: 47px;
     }
   }
 
   &__label {
     display: none;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+
+    color: #ffffff;
+
     @include adaptive-size(desktop) {
-      display: inline-block;
+      display: inline-flex;
     }
   }
 }
@@ -72,20 +97,14 @@
   @include adaptive-size(mobile) {
     width: 8px;
     height: 8px;
+    margin-left: 8px;
 
-    &:first-child {
-      margin-bottom: 3px;
-    }
-    &:nth-child(2) {
-      margin-bottom: 3px;
-    }
-    &:last-child {
-      margin-bottom: -3px;
-    }
+    margin-bottom: 3px;
   }
   @include adaptive-size(tablet) {
     width: 17px;
     height: 17px;
+    margin-left: 20px;
 
     &:first-child {
       margin-bottom: 7px;
@@ -100,6 +119,7 @@
   @include adaptive-size(desktop) {
     width: 16px;
     height: 16px;
+    margin-left: 8px;
 
     &:first-child {
       margin-bottom: 6px;
