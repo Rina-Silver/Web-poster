@@ -18,13 +18,14 @@
   &__list {
     display: flex;
   }
+
   @include adaptive-size(mobile) {
-    height: 58px;
+    height: 62px;
   }
   @include adaptive-size(tablet) {
     height: 154px;
   }
-  @include adaptive-size(desktop-break) {
+  @include adaptive-size(desktop) {
     height: 147px;
   }
 

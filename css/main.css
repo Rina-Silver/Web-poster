@@ -121,7 +121,7 @@ img {
   }
 }
 
-@media screen and (max-width: 1679px) {
+@media screen and (min-width: 1680px) {
   .nav-site {
     height: 147px;
   }
