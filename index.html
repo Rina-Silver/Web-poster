@@ -26,31 +26,31 @@
       <div class="container header__container">
         <nav class="nav-site header__nav-site" aria-label="Main navigation">
           <ul class="nav-site__list">
-            <li class="nav-site__item">
+            <li class="nav-site__item" data-type="snow-patches">
               <svg class="nav-site__icon" width="45" height="45">
                 <use href="./img/icons-for-map.svg#snow-patches"></use>
               </svg>
               <span class="nav-site__label">снежные участки</span>
             </li>
-            <li class="nav-site__item">
+            <li class="nav-site__item" data-type="light-underground">
               <svg class="nav-site__icon" width="45" height="45">
                 <use href="./img/icons-for-map.svg#light-underground"></use>
               </svg>
               <span class="nav-site__label">свет под землей</span>
             </li>
-            <li class="nav-site__item">
+            <li class="nav-site__item" data-type="gems">
               <svg class="nav-site__icon" width="38" height="46">
                 <use href="./img/icons-for-map.svg#gems"></use>
               </svg>
               <span class="nav-site__label">драгоценные камни</span>
             </li>
-            <li class="nav-site__item">
+            <li class="nav-site__item" data-type="lava-flow-points">
               <svg class="nav-site__icon" width="46" height="47">
                 <use href="./img/icons-for-map.svg#lava-flow-points"></use>
               </svg>
               <span class="nav-site__label">места протекания лавы</span>
             </li>
-            <li class="nav-site__item">
+            <li class="nav-site__item" data-type="lakes">
               <svg
                 class="nav-site__icon nav-site__icon--lake"
                 width="59"
@@ -60,13 +60,13 @@
               </svg>
               <span class="nav-site__label">озера</span>
             </li>
-            <li class="nav-site__item">
+            <li class="nav-site__item" data-type="groundwater">
               <svg class="nav-site__icon" width="26" height="47">
                 <use href="./img/icons-for-map.svg#groundwater"></use>
               </svg>
               <span class="nav-site__label">подземные воды</span>
             </li>
-            <li class="nav-site__item">
+            <li class="nav-site__item" data-type="temp">
               <svg class="nav-site__icon" width="20" height="45">
                 <use href="./img/icons-for-map.svg#temp"></use>
               </svg>
@@ -129,32 +129,83 @@
             </div>
 -->
             <div class="map__inner">
-              <p class="map__label">Старая Русса</p>
+              <p
+                id="label_russa"
+                class="map__label"
+                data-type="snow-patches,light-underground"
+              >
+                Старая Русса
+              </p>
 
-              <p class="map__label">Кунгурская пещера</p>
+              <p
+                id="label_cung_cave"
+                class="map__label"
+                data-type="snow-patches"
+              >
+                Кунгурская пещера
+              </p>
 
-              <p class="map__label">Тавдинские пещеры</p>
+              <p id="label_tavd_cave" class="map__label" data-type="gems,lakes">
+                Тавдинские пещеры
+              </p>
 
-              <p class="map__label">Денисова пещера</p>
+              <p id="label_den_cave" class="map__label" data-type="groundwater">
+                Денисова пещера
+              </p>
 
-              <p class="map__label">Кашкулакская пещера</p>
+              <p id="label_kash_cave" class="map__label" data-type="gems">
+                Кашкулакская пещера
+              </p>
 
-              <p class="map__label">Кахинайдаах</p>
+              <p id="label_kakhin" class="map__label" data-type="groundwater">
+                Кахинайдаах
+              </p>
 
-              <p class="map__label">Бездонная яма</p>
+              <p
+                id="label_yama"
+                class="map__label"
+                data-type="groundwater,light-underground"
+              >
+                Бездонная яма
+              </p>
 
-              <p class="map__label">Мутновский вулкан</p>
+              <p
+                id="label_mutn_volc"
+                class="map__label"
+                data-type="lava-flow-points"
+              >
+                Мутновский вулкан
+              </p>
 
-              <p class="map__label">Горелый</p>
+              <p
+                id="label_gorely"
+                class="map__label"
+                data-type="lava-flow-points"
+              >
+                Горелый
+              </p>
 
-              <p class="map__label">Вилючинский вулкан</p>
+              <p
+                id="label_vil_volc"
+                class="map__label"
+                data-type="lava-flow-points"
+              >
+                Вилючинский вулкан
+              </p>
 
-              <p class="map__label">Малый Семячик</p>
+              <p
+                id="label_mal_sem"
+                class="map__label"
+                data-type="lava-flow-points"
+              >
+                Малый Семячик
+              </p>
             </div>
           </div>
         </div>
       </section>
       <!-- /Section Map -->
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>

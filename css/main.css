@@ -278,11 +278,30 @@ img {
 }
 
 .map__box {
-  width: 220vw;
+  position: relative;
+}
+
+@media screen and (min-width: 320px) {
+  .map__box {
+    width: 150vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .map__box {
+    width: 120vw;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .map__box {
+    width: auto;
+  }
 }
 
 .map__img {
   position: relative;
+  width: 100%;
 }
 
 .map__inner {
@@ -292,6 +311,83 @@ img {
   right: 0;
   left: 0;
   z-index: 1;
+}
+
+.map__label {
+  position: absolute;
+  z-index: 2;
+  padding: 8px 9px 8px 9px;
+  background: #ffffff;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition: opacity 1s, visibility 0s 1s;
+  transition: opacity 1s, visibility 0s 1s;
+}
+
+.map__label--active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition: opacity 1s, visibility 0s;
+  transition: opacity 1s, visibility 0s;
+}
+
+#label_russa {
+  top: 39.4%;
+  left: 12.5%;
+}
+
+#label_cung_cave {
+  top: 50%;
+  left: 25.3%;
+}
+
+#label_tavd_cave {
+  top: 78.2%;
+  left: 14.9%;
+}
+
+#label_den_cave {
+  top: 88%;
+  left: 8.5%;
+}
+
+#label_kash_cave {
+  top: 89.6%;
+  left: 31.1%;
+}
+
+#label_kakhin {
+  top: 40.3%;
+  left: 51.1%;
+}
+
+#label_yama {
+  top: 85.6%;
+  left: 61.4%;
+}
+
+#label_mutn_volc {
+  top: 19.3%;
+  left: 59.8%;
+}
+
+#label_gorely {
+  top: 24.9%;
+  left: 71.1%;
+}
+
+#label_vil_volc {
+  top: 31.3%;
+  left: 69.8%;
+}
+
+#label_mal_sem {
+  top: 17.8%;
+  left: 81.4%;
 }
 
 .animation {

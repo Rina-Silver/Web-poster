@@ -157,11 +157,22 @@ nav-site__icon--lake {
 
 .map {
   &__box {
-    width: 220vw;
+    position: relative;
+
+    @include adaptive-size(mobile) {
+      width: 150vw;
+    }
+    @include adaptive-size(tablet) {
+      width: 120vw;
+    }
+    @include adaptive-size(desktop) {
+      width: auto;
+    }
   }
 
   &__img {
     position: relative;
+    width: 100%;
   }
 
   &__inner {
@@ -172,4 +183,77 @@ nav-site__icon--lake {
     left: 0;
     z-index: 1;
   }
+}
+
+.map__label {
+  position: absolute;
+  z-index: 2;
+  padding: 8px 9px 8px 9px;
+  background: #ffffff;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition: opacity 1s, visibility 0s 1s;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transition-property: opacity, visibility;
+    transition: opacity 1s, visibility 0s;
+  }
+}
+
+#label_russa {
+  top: 39.4%;
+  left: 12.5%;
+}
+
+#label_cung_cave {
+  top: 50%;
+  left: 25.3%;
+}
+
+#label_tavd_cave {
+  top: 78.2%;
+  left: 14.9%;
+}
+
+#label_den_cave {
+  top: 88%;
+  left: 8.5%;
+}
+
+#label_kash_cave {
+  top: 89.6%;
+  left: 31.1%;
+}
+
+#label_kakhin {
+  top: 40.3%;
+  left: 51.1%;
+}
+
+#label_yama {
+  top: 85.6%;
+  left: 61.4%;
+}
+
+#label_mutn_volc {
+  top: 19.3%;
+  left: 59.8%;
+}
+
+#label_gorely {
+  top: 24.9%;
+  left: 71.1%;
+}
+
+#label_vil_volc {
+  top: 31.3%;
+  left: 69.8%;
+}
+
+#label_mal_sem {
+  top: 17.8%;
+  left: 81.4%;
 }
