@@ -4,7 +4,7 @@ let map__labels = Array.from(document.querySelectorAll('.map__label'));
 const clickOnNav = function() {
     
     map__labels.forEach(e => {
-        e.classList.remove('map__label_active');
+        e.classList.remove('map__label--active');
     });
 
 
@@ -19,13 +19,13 @@ const clickOnNav = function() {
     });
     
     
-    if (!this.classList.contains('nav-site__item_active')) {
+    if (!this.classList.contains('nav-site__item--active')) {
         type_labels.forEach(e => {
-            e.classList.add('map__label_active');
+            e.classList.add('map__label--active');
         });
-        this.classList.add('nav-site__item_active');
+        this.classList.add('nav-site__item--active');
     } else {
-        this.classList.remove('nav-site__item_active');
+        this.classList.remove('nav-site__item--active');
     }
 };
 
