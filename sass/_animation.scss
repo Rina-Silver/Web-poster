@@ -30,6 +30,30 @@
   animation-duration: 5s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
+
+  @include adaptive-size(mobile) {
+    width: 38.136vw;
+    height: 38.136vw;
+  }
+  @include adaptive-size(mobile-landscape) {
+    width: 27.013vw;
+    height: 27.013vw;
+  }
+
+  @include adaptive-size(tablet) {
+    width: 33.8457vw;
+    height: 33.8457vw;
+  }
+
+  @include adaptive-size(tablet-landscape) {
+    width: 19.068vw;
+    height: 19.068vw;
+  }
+
+  @include adaptive-size(desktop) {
+    width: 267px;
+    height: 267px;
+  }
 }
 
 @keyframes zoomInZoomOut {

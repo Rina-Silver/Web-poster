@@ -161,6 +161,9 @@ img {
 }
 
 @media screen and (min-width: 1680px) {
+  .nav-site__item {
+    margin-bottom: 20px;
+  }
   .nav-site__item:not(:last-child) {
     margin-right: 50px;
   }
@@ -501,6 +504,41 @@ img {
 
 .animation__gradient50 {
   background: radial-gradient(50% 50% at 50% 50%, rgba(196, 196, 196, 0.5) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+@media screen and (min-width: 320px) {
+  .animation {
+    width: 38.136vw;
+    height: 38.136vw;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  .animation {
+    width: 27.013vw;
+    height: 27.013vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .animation {
+    width: 33.8457vw;
+    height: 33.8457vw;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .animation {
+    width: 19.068vw;
+    height: 19.068vw;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .animation {
+    width: 267px;
+    height: 267px;
+  }
 }
 
 @-webkit-keyframes zoomInZoomOut {

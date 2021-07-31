@@ -55,6 +55,7 @@
       }
     }
     @include adaptive-size(desktop) {
+      margin-bottom: 20px;
       &:not(:last-child) {
         margin-right: 50px;
       }
