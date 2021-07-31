@@ -39,7 +39,17 @@
       }
     }
 
+    @include adaptive-size(mobile-landscape) {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
     @include adaptive-size(tablet) {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+    @include adaptive-size(tablet-landscape) {
       &:not(:last-child) {
         margin-right: 83px;
       }
@@ -67,6 +77,7 @@
         width: 142px;
       }
     }
+
     @include adaptive-size(desktop) {
       width: 59px;
       height: 47px;
@@ -88,19 +99,6 @@
     @include adaptive-size(desktop) {
       display: inline-flex;
     }
-  }
-}
-
-nav-site__icon--lake {
-  @include adaptive-size(mobile) {
-    width: 42px;
-  }
-
-  @include adaptive-size(tablet) {
-    width: 142px;
-  }
-  @include adaptive-size(desktop) {
-    width: 95px;
   }
 }
 
@@ -147,6 +145,7 @@ nav-site__icon--lake {
 
 .map__container {
   overflow: scroll;
+  cursor: grab;
   scrollbar-width: none;
   height: 100%;
 }
@@ -160,11 +159,20 @@ nav-site__icon--lake {
     position: relative;
 
     @include adaptive-size(mobile) {
-      width: 150vw;
+      width: 240vw;
     }
+    @include adaptive-size(mobile-landscape) {
+      width: 170vw;
+    }
+
     @include adaptive-size(tablet) {
+      width: 213vw;
+    }
+
+    @include adaptive-size(tablet-landscape) {
       width: 120vw;
     }
+
     @include adaptive-size(desktop) {
       width: auto;
     }

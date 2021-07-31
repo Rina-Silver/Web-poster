@@ -41,13 +41,13 @@ img {
   @include adaptive-size(mobile) {
     max-width: 320px;
   }
-  @include adaptive-size(tablet-break) {
+  @include adaptive-size(mobile-landscape) {
     max-width: 475px;
   }
   @include adaptive-size(tablet) {
     max-width: 1024px;
   }
-  @include adaptive-size(desktop-break) {
+  @include adaptive-size(tablet-landscape) {
     max-width: 1366px;
   }
   @include adaptive-size(desktop) {
