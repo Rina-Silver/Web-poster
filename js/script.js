@@ -1,7 +1,10 @@
-﻿let nav_items = Array.from(document.querySelectorAll('.nav-site__item'));
+﻿let nav__items = Array.from(document.querySelectorAll('.nav-site__item'));
 let map__labels = Array.from(document.querySelectorAll('.map__label'));
 
 const clickOnNav = function () {
+  nav__items.forEach(e => {
+    if (e !== this) e.classList.remove('nav-site__item--active');
+  });
   map__labels.forEach(e => {
     e.classList.remove('map__label--active');
   });
@@ -25,7 +28,7 @@ const clickOnNav = function () {
   }
 };
 
-nav_items.forEach(e => {
+nav__items.forEach(e => {
   e.addEventListener('click', clickOnNav);
 });
 

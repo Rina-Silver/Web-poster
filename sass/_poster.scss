@@ -33,6 +33,14 @@
     display: flex;
     align-items: flex-end;
 
+    &:hover,
+    &:focus {
+      text-shadow: 0 0 10px #fff;
+    }
+    &--active {
+      text-shadow: 0 0 10px #fff;
+    }
+
     @include adaptive-size(mobile) {
       &:not(:last-child) {
         margin-right: 14px;
@@ -200,12 +208,14 @@
   z-index: 2;
   padding: 8px 9px 8px 9px;
   background: #ffffff;
+
   visibility: hidden;
   opacity: 0;
   transition-property: opacity, visibility;
   transition: opacity 1s, visibility 0s 1s;
 
   &--active {
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.8);
     visibility: visible;
     opacity: 1;
     transition-property: opacity, visibility;
