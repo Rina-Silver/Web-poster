@@ -1,35 +1,38 @@
-﻿let nav__items = Array.from(document.querySelectorAll('.nav-site__item'));
-let map__labels = Array.from(document.querySelectorAll('.map__label'));
+﻿const navRef = document.querySelector('.nav-site__list');
+const labelRef = document.querySelector('.map__label');
 
-const clickOnNav = function (event) {
-  nav__items.forEach(e => {
-    if (e !== event.currentTarget) e.classList.remove('nav-site__item--active');
-  });
-  map__labels.forEach(e => {
-    e.classList.remove('map__label--active');
-  });
+navRef.addEventListener('click', clickOnNav);
 
-  let type = event.currentTarget.dataset.type;
+function clickOnNav(e) {
+  e.preventDefault();
+  const target = e.target.closest('.nav-site__item');
 
-  let type_labels = map__labels.filter(e => {
-    if (e.dataset.type.indexOf(type) != -1) {
-      return true;
-    }
-    return false;
-  });
+  if (!target) return;
 
-  if (!event.currentTarget.classList.contains('nav-site__item--active')) {
-    type_labels.forEach(e => {
-      e.classList.add('map__label--active');
-    });
-    event.currentTarget.classList.add('nav-site__item--active');
-  } else {
-    event.currentTarget.classList.remove('nav-site__item--active');
+  setActiveItem(target);
+  setActiveLabel(target);
+}
+
+function setActiveItem(nextActiveItem) {
+  const currentActiveItem = navRef.querySelector('li.nav-site__item--active');
+
+  if (currentActiveItem) {
+    currentActiveItem.classList.remove('nav-site__item--active');
   }
-};
-nav__items.forEach(e => {
-  e.addEventListener('click', clickOnNav);
-});
+
+  nextActiveItem.classList.add('nav-site__item--active');
+}
+function setActiveLabel(ActiveItem) {
+  const mapLabels = document.querySelectorAll('.map__label');
+
+  const type = ActiveItem.dataset.type;
+  const currentActiveLabel = [...mapLabels].filter(el =>
+    el.dataset.type.includes(type),
+  );
+  if (ActiveItem.classList.contains('nav-site__item--active')) {
+    currentActiveLabel.map(el => el.classList.add('map__label--active'));
+  } else [...mapLabels].map(el => el.classList.remove('map__label--active'));
+}
 
 const slider = document.querySelector('.map__container');
 let mouseDown = false;
