@@ -29,9 +29,10 @@ function setActiveLabel(ActiveItem) {
   const currentActiveLabel = [...mapLabels].filter(el =>
     el.dataset.type.includes(type),
   );
+  [...mapLabels].map(el => el.classList.remove('map__label--active'));
   if (ActiveItem.classList.contains('nav-site__item--active')) {
     currentActiveLabel.map(el => el.classList.add('map__label--active'));
-  } else [...mapLabels].map(el => el.classList.remove('map__label--active'));
+  }
 }
 
 const slider = document.querySelector('.map__container');
